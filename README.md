@@ -1,71 +1,120 @@
-# Programming-Fundamental
+# 📘 Programming Fundamentals -- Coursework Repository
 
-This repository contains example programs, lecture notes, and lab exercises for an introductory Programming Fundamentals course (Python).
+A collection of lecture examples, lab exercises, and small practice
+programmes completed during my University Programming Fundamentals
+(Python) course. This repository serves as a proof of study, documenting
+the concepts, logic-building tasks, and hands-on coding I covered
+throughout the semester.
 
-**Repository summary**
-- **Total files analyzed:** 23 (primarily Python scripts and one text file). One media file (`recording.mp4`) is present in `All Lectures/Programs` and was not analyzed in-text.
-- **Primary topics:** basic I/O, arithmetic, control flow (if/else), loops (for/while), functions, modules, simple calculations, and small lab problems.
+## 📑 Table of Contents
 
-**Quick structure**
-- `first.py`: Collection of short examples demonstrating variables, constants, arithmetic, and printing.
-- `test.py`: Small program computing cylinder area and volume using user input.
-- `All Labs/`:
-  - `lab_01.py` ... `lab_04.py`: Lab exercises (commented examples and small programs exploring control flow and basic I/O).
-- `All Lectures/`:
-  - `lect_01.py` ... `lect_14.py`: Lecture example scripts covering topics such as loops, functions, file I/O, math operations, and exercises.
-  - `first.txt`: Example text file used by some scripts.
-  - `Programs/`:
-    - `calculator.py`: Interactive calculator program (multiple operation choices).
-    - `santinal_loop_three_programs.py`: Examples of loops and small interactive utilities.
-    - `recording.mp4`: Video recording (binary file — not included in textual analysis).
+-   🎯 Purpose of This Repository
+-   🗂️ Repository Structure
+-   📚 Topics Covered
+-   📝 File Overview
+-   ▶️ How to Run the Programs
+-   ⚠️ Notes & Recommendations
+-   📄 Educational Use Notice
 
-**Key observations from analysis**
-- Many files are interactive and expect user input via `input()` or `eval(input())`.
-- `eval()` is used widely (e.g., `eval(input(...))` and `map(eval, input().split())`). This is unsafe for untrusted input — consider replacing with `int()`, `float()`, or parsing functions.
-- Some scripts use newer Python syntax (e.g., `int | float` union types in annotations), which requires Python 3.10+.
-- The codebase is a set of independent example scripts; there is no central test harness or packaging.
+## 🎯 Purpose of This Repository
 
-**How to run**
-1. Ensure you have Python 3.10 or newer installed.
-2. Open PowerShell in the repository root (where `README.md` is located).
-3. To check Python version:
-```
-python --version
-```
-4. Run a script (examples):
-```
-python first.py
-python test.py
-python "All Lectures\Programs\calculator.py"
-python "All Lectures\lect_07.py"
-```
-Notes:
-- Many scripts prompt for input. Provide the requested values as shown in prompts.
-- When running from PowerShell, use quoted paths for files in subfolders with spaces.
+This repository represents my journey through the Programming
+Fundamentals course. It includes all major components of the subject
+such as:
 
-**Recommendations / Next steps**
-- Replace all uses of `eval(input(...))` with safe parsing (for integers: `int(input(...))`, floats: `float(input(...))`, or use `ast.literal_eval` when needed).
-- Add a `requirements.txt` only if external packages are needed (current code uses standard library).
-- Add simple unit tests for pure functions (e.g., arithmetic functions) using `pytest` or `unittest`.
-- Optionally format code with `black` and add type hints gradually.
-- Create small CLI wrappers for interactive programs so they can accept command-line args for automated testing.
+-   Writing basic Python scripts
+-   Understanding variables, data types, and expressions
+-   Working with conditional logic and loops
+-   Building simple interactive programmes
+-   Practicing lecture and lab tasks
 
-**Example: secure replacement for `eval(input())`**
-```
-# Instead of this:
-# x = eval(input("Enter a number:"))
+## 🗂️ Repository Structure
 
-# Use:
-try:
-    x = int(input("Enter an integer: "))
-except ValueError:
-    print("Invalid input — please enter an integer.")
-```
+    Programming-Fundamental/
+    │
+    ├── first.py                      
+    ├── test.py                       
+    │
+    ├── All Labs/
+    │   ├── lab_01.py
+    │   ├── lab_02.py
+    │   ├── lab_03.py
+    │   └── lab_04.py                 
+    │
+    ├── All Lectures/
+    │   ├── lect_01.py ... lect_14.py 
+    │   ├── first.txt                 
+    │   └── Programs/
+    │       ├── calculator.py         
+    │       ├── santinal_loop_three_programs.py
+    │       └── recording.mp4         
+    │
+    └── README.md
 
-If you want, I can:
-- Add unit tests for a chosen file or function.
-- Replace `eval(input(...))` occurrences with safe parsing across the repository.
-- Add a `pyproject.toml` + `black` configuration and format files.
+The repository contains 23 Python files, each demonstrating a specific
+concept from the course.
 
----
-Generated on repository analysis (Nov 23, 2025). If you want a different README style (short README, badges, or contributing section), tell me which format you prefer and I will update it.
+## 📚 Topics Covered
+
+-   Basic Input/Output
+-   Arithmetic and expressions
+-   If--Else decision making
+-   Loops (for, while, sentinel loops)
+-   Functions
+-   Simple modules
+-   File handling
+-   Logic building exercises
+-   Interactive console programmes
+
+## 📝 File Overview
+
+| File / Folder | Description |
+|---|---|
+| `first.py` | Intro examples: variables, printing, arithmetic |
+| `test.py` | Calculates area & volume of a cylinder using user input |
+| `All Labs/lab_01.py` | Basic input/output tasks |
+| `All Labs/lab_02.py` | If–else and simple calculations |
+| `All Labs/lab_03.py` | Loops and repetitive tasks |
+| `All Labs/lab_04.py` | Mixed exercises and logic-building |
+| `All Lectures/lect_01.py` → `lect_14.py` | Lecture demonstration scripts covering course topics |
+| `All Lectures/first.txt` | Example text file used by some scripts |
+| `All Lectures/Programs/calculator.py` | Multi-operation interactive calculator |
+| `All Lectures/Programs/santinal_loop_three_programs.py` | Small utilities and loop examples |
+| `All Lectures/Programs/recording.mp4` | Video recording (binary file — not analyzed in-text) |
+
+
+## ▶️ How to Run the Programs
+
+You only need Python 3.10 or newer.
+
+### 1. Check Python Version
+
+    python --version
+
+### 2. Run a Python Script
+
+    python first.py
+    python test.py
+    python "All Lectures/lect_07.py"
+    python "All Lectures/Programs/calculator.py"
+
+## ⚠️ Notes & Recommendations
+
+### Replace eval(input())
+
+    # ❌ Avoid
+    value = eval(input("Enter number: "))
+
+    # ✔️ Safe alternative
+    value = int(input("Enter number: "))
+
+### Optional improvements
+
+-   Add unit tests\
+-   Use black formatter\
+-   Add type hints\
+-   Support CLI arguments
+
+## 📄 Educational Use Notice
+
+This repository is for educational and demonstration purposes only.
