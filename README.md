@@ -6,6 +6,12 @@ programmes completed during my University Programming Fundamentals
 the concepts, logic-building tasks, and hands-on coding I covered
 throughout the semester.
 
+## 🔔 Recent updates
+
+- **2025-11-23** — Fixed the `File Overview` table (converted to Markdown), improved formatting, and added details for `All Lectures/Programs/recording.mp4`.
+- **2025-11-23** — Inserted this `Recent updates` section so future changes are tracked here.
+
+
 ## 📑 Table of Contents
 
 -   🎯 Purpose of This Repository
@@ -34,12 +40,16 @@ such as:
     │
     ├── first.py                      
     ├── test.py                       
-    │
+    │    
     ├── All Labs/
+    │   └──── Practice Tasks/
+    │         └── practice_tasks.py
     │   ├── lab_01.py
     │   ├── lab_02.py
     │   ├── lab_03.py
-    │   └── lab_04.py                 
+    │   └── lab_04.py
+    │   └── lab_05.py
+    │   └── lab_06.py                         
     │
     ├── All Lectures/
     │   ├── lect_01.py ... lect_14.py 
@@ -51,7 +61,7 @@ such as:
     │
     └── README.md
 
-The repository contains 23 Python files, each demonstrating a specific
+The repository contains **25 Python files**, each demonstrating a specific
 concept from the course.
 
 ## 📚 Topics Covered
@@ -68,6 +78,8 @@ concept from the course.
 
 ## 📝 File Overview
 
+- **2025-11-23** — README updated with exact Python file count (25 files).
+
 | File / Folder | Description |
 |---|---|
 | `first.py` | Intro examples: variables, printing, arithmetic |
@@ -76,6 +88,9 @@ concept from the course.
 | `All Labs/lab_02.py` | If–else and simple calculations |
 | `All Labs/lab_03.py` | Loops and repetitive tasks |
 | `All Labs/lab_04.py` | Mixed exercises and logic-building |
+| `All Labs/Practice Tasks/practice_tasks.py` | Additional practice tasks and examples |
+| `All Labs/lab_05.py` | Extra lab exercises |
+| `All Labs/lab_06.py` | Extra lab exercises |
 | `All Lectures/lect_01.py` → `lect_14.py` | Lecture demonstration scripts covering course topics |
 | `All Lectures/first.txt` | Example text file used by some scripts |
 | `All Lectures/Programs/calculator.py` | Multi-operation interactive calculator |
@@ -88,15 +103,29 @@ concept from the course.
 You only need Python 3.10 or newer.
 
 ### 1. Check Python Version
-
-    python --version
+```powershell
+# Check Python version
+python --version
+# (Windows alternative)
+py --version
+```
 
 ### 2. Run a Python Script
 
-    python first.py
-    python test.py
-    python "All Lectures/lect_07.py"
-    python "All Lectures/Programs/calculator.py"
+Use PowerShell from the repository root and run (example):
+
+```powershell
+python .\first.py
+python .\test.py
+python .\"All Lectures\lect_07.py"
+python .\"All Lectures\Programs\calculator.py"
+
+# Alternatives:
+# Windows Python launcher
+py .\first.py
+# macOS / Linux
+python3 first.py
+```
 
 ## ⚠️ Notes & Recommendations
 
